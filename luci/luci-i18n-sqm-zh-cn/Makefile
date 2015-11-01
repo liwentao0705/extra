@@ -21,7 +21,7 @@ include $(INCLUDE_DIR)/package.mk
 
 define Package/luci-i18n-sqm-zh-cn
 	SECTION:=luci
-	CATEGORY:=Gmod
+	CATEGORY:=extra
 	SUBMENU:=Luci
 	TITLE:=zh-cn sqm LuCI interface
 	PKGARCH:=all

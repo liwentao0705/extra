@@ -21,7 +21,7 @@ include $(INCLUDE_DIR)/package.mk
 
 define Package/local-luci-zh-cn
 	SECTION:=luci
-	CATEGORY:=Gmod
+	CATEGORY:=extra
 	SUBMENU:=Luci
 	TITLE:=luci localization configuration
 	PKGARCH:=all

@@ -21,7 +21,7 @@ include $(INCLUDE_DIR)/package.mk
 
 define Package/redial
 	SECTION:=net
-	CATEGORY:=Gmod
+	CATEGORY:=extra
 	SUBMENU:=Network
 	TITLE:=Get the public network ip
 	PKGARCH:=all

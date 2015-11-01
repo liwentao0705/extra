@@ -30,7 +30,7 @@ include $(INCLUDE_DIR)/package.mk
 
 define Package/ShadowVPN
 	SECTION:=net
-	CATEGORY:=Gmod
+	CATEGORY:=extra
 	SUBMENU:=Network
 	TITLE:=A fast, safe VPN based on libsodium
 	URL:=https://github.com/clowwindy/ShadowVPN

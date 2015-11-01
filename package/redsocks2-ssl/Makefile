@@ -27,7 +27,7 @@ include $(INCLUDE_DIR)/package.mk
 
 define Package/redsocks2/Default
 	SECTION:=net
-	CATEGORY:=Gmod
+	CATEGORY:=extra
 	SUBMENU:=Network
 	TITLE:=TCP to SOCKS or HTTPS proxy server $(2)
 	URL:=https://github.com/semigodking/redsocks

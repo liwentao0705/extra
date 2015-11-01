@@ -21,7 +21,7 @@ include $(INCLUDE_DIR)/package.mk
 
 define Package/luci-app-redsocks2-openssl
 	SECTION:=luci
-	CATEGORY:=Gmod
+	CATEGORY:=extra
 	SUBMENU:=Luci
 	TITLE:=Redsocks2-openssl LuCI interface
 	PKGARCH:=all

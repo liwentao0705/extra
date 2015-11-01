@@ -36,7 +36,7 @@ endef
 
 define Package/aria2
   SECTION:=net
-  CATEGORY:=Gmod
+  CATEGORY:=extra
   SUBMENU:=Network
   TITLE:=lightweight download utility
   URL:=http://aria2.sourceforge.net/

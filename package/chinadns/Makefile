@@ -29,7 +29,7 @@ include $(INCLUDE_DIR)/package.mk
 
 define Package/ChinaDNS
 	SECTION:=net
-	CATEGORY:=Gmod
+	CATEGORY:=extra
 	SUBMENU:=Network
 	TITLE:=ChinaDNS
 	URL:=https://github.com/clowwindy/ChinaDNS
