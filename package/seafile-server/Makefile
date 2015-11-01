@@ -33,7 +33,7 @@ define Package/seafile-server
     URL:=http://seafile.com/
     DEPENDS:=+libarchive +libopenssl +glib2 +libsearpc +seafile-ccnet +seafile-seahub \
 		+sqlite3-cli +python-mysql +jansson +libevent2 +libevent2-openssl +zlib +libzdb +libsqlite3 \
-		+libmysqlclient +libpthread +libuuid +libevhtp-1.1\
+		+libmysqlclient +libpthread +libuuid +libevhtp\
 		+bash +sudo +procps-ng +procps-ng-pkill $(ICONV_DEPENDS)
     EXTRA_DEPENDS:=seafile-ccnet (=4.1.2-a73109f09af4ecc49cdc4c57cdde51b38e15c31a-2), seafile-seahub (=4.1.2-3fb1288f920de03a4e2e6a06b60671ce98971742)
 endef
