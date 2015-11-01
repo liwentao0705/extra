@@ -20,7 +20,9 @@ diff -rupN seafile-3.1.7-server.orig/scripts/seaf-gc.sh seafile-3.1.7-server/scr
      echo "Starting seafserv-gc, please wait ..."
  
 -    LD_LIBRARY_PATH=$SEAFILE_LD_LIBRARY_PATH ${seaf_gc} \
--        -c "${default_ccnet_conf_dir}" -d "${seafile_data_dir}" \
+-        -c "${default_ccnet_conf_dir}" \
+-        -d "${seafile_data_dir}" \
+-        -F "${default_conf_dir}" \
 -        ${seaf_gc_opts}
 +    ${seaf_gc} -c "${default_ccnet_conf_dir}" -d "${seafile_data_dir}" ${seaf_gc_opts}
  
@@ -37,4 +39,4 @@ diff -rupN seafile-3.1.7-server.orig/scripts/setup-seafile-mysql.sh seafile-3.1.
 +
  cd "$INSTALLPATH"
  
- python_script=setup-seafile-mysql.py
+python_script=setup-seafile-mysql.py
