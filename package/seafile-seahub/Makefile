@@ -23,7 +23,7 @@ $(call include_mk, python-package.mk)
 
 define Package/seafile-seahub
     SECTION:=net
-    CATEGORY:=Network
+    CATEGORY:=extra
     TITLE:=Seafile server - seahub component
     MAINTAINER:=Gergely Kiss <mail.gery@gmail.com>
     URL:=http://seafile.com/

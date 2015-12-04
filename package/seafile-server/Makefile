@@ -27,7 +27,7 @@ include $(INCLUDE_DIR)/nls.mk
 
 define Package/seafile-server
     SECTION:=net
-    CATEGORY:=Network
+    CATEGORY:=extra
     TITLE:=Seafile server
     MAINTAINER:=Gergely Kiss <mail.gery@gmail.com>
     URL:=http://seafile.com/
