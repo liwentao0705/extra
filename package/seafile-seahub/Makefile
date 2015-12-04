@@ -8,14 +8,14 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=seafile-seahub
-PKG_VERSION:=5.0.1
+PKG_VERSION:=4.4.2
 PKG_RELEASE=$(PKG_SOURCE_VERSION)
 PKG_LICENSE:=Apache-2.0
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/haiwen/seahub.git
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
-PKG_SOURCE_VERSION:=0d7d75f0faf92554543eca11de83db0995920a7e
+PKG_SOURCE_VERSION:=c8c2dad91484b7c025f9e8efdbe9546bfdfe3e1b
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION)-$(PKG_SOURCE_VERSION).tar.gz
 
 include $(INCLUDE_DIR)/package.mk
@@ -23,7 +23,7 @@ $(call include_mk, python-package.mk)
 
 define Package/seafile-seahub
     SECTION:=net
-    CATEGORY:=extra
+    CATEGORY:=Network
     TITLE:=Seafile server - seahub component
     MAINTAINER:=Gergely Kiss <mail.gery@gmail.com>
     URL:=http://seafile.com/

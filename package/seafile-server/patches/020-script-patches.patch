@@ -1,9 +1,10 @@
---- seafile-5.0.0-server.orig/scripts/seaf-gc.sh	2015-11-02 06:46:49.392074390 +0800
-+++ seafile-5.0.0-server.orig/scripts/seaf-gc.sh	2015-11-02 06:51:42.890466374 +0800
-@@ -7,11 +7,10 @@
+diff -rupN seafile-3.1.7-server.orig/scripts/seaf-gc.sh seafile-3.1.7-server/scripts/seaf-gc.sh
+--- seafile-3.1.7-server.orig/scripts/seaf-gc.sh	2014-10-16 05:30:04.000000000 +0200
++++ seafile-3.1.7-server/scripts/seaf-gc.sh	2014-12-13 00:51:12.919136978 +0100
+@@ -6,11 +6,10 @@ SCRIPT=$(readlink -f "$0")
+ INSTALLPATH=$(dirname "${SCRIPT}")
  TOPDIR=$(dirname "${INSTALLPATH}")
  default_ccnet_conf_dir=${TOPDIR}/ccnet
- default_conf_dir=${TOPDIR}/conf
 -seaf_gc=${INSTALLPATH}/seafile/bin/seafserv-gc
 +seaf_gc=/usr/bin/seafserv-gc
  seaf_gc_opts=""
@@ -14,25 +15,26 @@
  
  script_name=$0
  function usage () {
-@@ -79,11 +78,7 @@
+@@ -78,9 +77,7 @@ function run_seaf_gc () {
  
      echo "Starting seafserv-gc, please wait ..."
  
 -    LD_LIBRARY_PATH=$SEAFILE_LD_LIBRARY_PATH ${seaf_gc} \
--        -c "${default_ccnet_conf_dir}" \
--        -d "${seafile_data_dir}" \
--        -F "${default_conf_dir}" \
+-        -c "${default_ccnet_conf_dir}" -d "${seafile_data_dir}" \
 -        ${seaf_gc_opts}
 +    ${seaf_gc} -c "${default_ccnet_conf_dir}" -d "${seafile_data_dir}" ${seaf_gc_opts}
  
      echo "seafserv-gc run done"
      echo
---- seafile-5.0.0-server.orig/scripts/setup-seafile-mysql.sh	2015-11-02 06:56:44.885869706 +0800
-+++ seafile-5.0.0-server.orig/scripts/setup-seafile-mysql.sh	2015-11-02 06:57:11.719905545 +0800
-@@ -10,6 +10,7 @@
+diff -rupN seafile-3.1.7-server.orig/scripts/setup-seafile-mysql.sh seafile-3.1.7-server/scripts/setup-seafile-mysql.sh
+--- seafile-3.1.7-server.orig/scripts/setup-seafile-mysql.sh	2014-10-16 05:30:04.000000000 +0200
++++ seafile-3.1.7-server/scripts/setup-seafile-mysql.sh	2014-12-13 00:51:49.242172631 +0100
+@@ -9,6 +9,8 @@ set -e
+ SCRIPT=$(readlink -f "$0")
  INSTALLPATH=$(dirname "${SCRIPT}")
  
- cd "$INSTALLPATH"
 +export PYTHONPATH="/usr/share/seafile/seafile-server/seahub/thirdpart:$PYTHONPATH"
++
+ cd "$INSTALLPATH"
  
  python_script=setup-seafile-mysql.py
